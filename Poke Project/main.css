@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(144, 217, 150, .5), rgba(79, 190, 84, .5));
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+    padding-top: 30px;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+#poke-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.poke-box {
+    max-width: 350px;
+    width: 100%;
+    margin: 30px;
+    background-color: gray;
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+h2 {
+    display: none;
+}
+
+.poke-box.rotate {
+    transform: rotateY(360deg);
+}
+
+.poke-box.show h2 {
+    display: block;
+}
+
+.poke-box img {
+    display: block;
+    width: 100%;
+    height: calc(100% - 50px);
+    object-fit: cover;
+}
+
+.poke-body {
+    height: 50px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    html {
+        font-size: 75%;
+    }
+}
